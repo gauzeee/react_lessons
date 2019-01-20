@@ -1,0 +1,29 @@
+{
+  "name": "react_lessons",
+  "version": "1.0.0",
+  "description": "Glo Academy React Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauzeee/react_lessons.git"
+  },
+  "author": "gauzeee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauzeee/react_lessons/issues"
+  },
+  "homepage": "https://github.com/gauzeee/react_lessons#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
