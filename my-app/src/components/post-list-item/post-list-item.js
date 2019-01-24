@@ -58,7 +58,11 @@ export default class PostListItem extends React.Component {
           >
             <i className="fa fa-star" />
           </button>
-          <button type="button" className="btn-trash btn-sm">
+          <button
+            type="button"
+            onClick={this.props.onDelete}
+            className="btn-trash btn-sm"
+          >
             <i className="fa fa-trash-o" />
           </button>
           <i className="fa fa-heart" />

@@ -1,9 +1,12 @@
 import React from "react";
+import { Button } from "reactstrap";
 
 const PostStatusFilter = () => {
   return (
     <div className="btn-group">
-      <button className="btn btn-info">All</button>
+      <Button outline color="info">
+        All
+      </Button>
       <button className="btn-btn-outline-primary">Favorites</button>
     </div>
   );
