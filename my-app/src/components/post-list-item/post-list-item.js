@@ -4,25 +4,9 @@ export default class PostListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      important: false,
-      label: props.label,
-      like: false
+      label: props.label
     };
-    this.onImportant = this.onImportant.bind(this);
-    this.onLike = this.onLike.bind(this);
     this.editPost = this.editPost.bind(this);
-  }
-
-  onImportant() {
-    this.setState(({ important }) => ({
-      important: !important
-    }));
-  }
-
-  onLike() {
-    this.setState(({ like }) => ({
-      like: !like
-    }));
   }
 
   editPost() {
@@ -33,14 +17,21 @@ export default class PostListItem extends React.Component {
   }
 
   render() {
-    const { important, like, label } = this.state;
+    const { label } = this.state;
+    const {
+      onDelete,
+      onToggleImportant,
+      onToggleLiked,
+      important,
+      like
+    } = this.props;
     let classNames = "app-list-item d-flex justify-content-between";
 
     if (important) classNames += " important";
     if (like) classNames += " like";
     return (
       <div className={classNames}>
-        <span className="app-list-item-label" onClick={this.onLike}>
+        <span className="app-list-item-label" onClick={onToggleLiked}>
           {label}
         </span>
         <div className="d-flex justify-content-center align-items-center">
@@ -54,15 +45,11 @@ export default class PostListItem extends React.Component {
           <button
             type="button"
             className="btn-star btn-sm"
-            onClick={this.onImportant}
+            onClick={onToggleImportant}
           >
             <i className="fa fa-star" />
           </button>
-          <button
-            type="button"
-            onClick={this.props.onDelete}
-            className="btn-trash btn-sm"
-          >
+          <button type="button" onClick={onDelete} className="btn-trash btn-sm">
             <i className="fa fa-trash-o" />
           </button>
           <i className="fa fa-heart" />
