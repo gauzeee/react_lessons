@@ -63,12 +63,16 @@ export default class App extends React.Component {
       important: false,
       id: this.maxId++
     };
-    this.setState(({ data }) => {
-      const newData = [...data, newPost];
-      return {
-        data: newData
-      };
-    });
+    if (body.length > 0) {
+      this.setState(({ data }) => {
+        const newData = [...data, newPost];
+        return {
+          data: newData
+        };
+      });
+    } else {
+      alert("Can`t poast empty, type anything!");
+    }
   }
 
   onToggleImportant(id) {
