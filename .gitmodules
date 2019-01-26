@@ -1,0 +1,3 @@
+[submodule "react-gotapp"]
+	path = react-gotapp
+	url = https://github.com/ihinstone/react-gotapp.git
