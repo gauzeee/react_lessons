@@ -64,9 +64,7 @@ export default class App extends React.Component {
       id: this.maxId++
     };
     if (body.length > 0) {
-      this.setState(({ data }) => {
-        const newData = [...data, newPost];
-        return {
+      this.setState(({ data }) => { 
           data: newData
         };
       });
